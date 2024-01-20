@@ -1,0 +1,348 @@
+:root {
+    --login-contact-btn: hsl(0, 94%, 66%);
+    --btn-color-blue: hsl(231, 69%, 60%);
+}
+
+body {
+    font-size: 18px;
+    font-family: 'Rubik', sans-serif;
+}
+
+h2 {
+    font-weight: bolder;
+}
+
+a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+}
+
+.main {
+    padding-top: 2rem;
+}
+
+.navbar {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: auto 4rem 4rem;
+}
+
+.navbar-item:nth-child(2) {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.navbar-item:nth-child(2) img {
+    display: none;
+}
+
+.navbar-item:nth-child(2) a {
+    padding: 0.2rem 1rem;
+    color: black;
+}
+
+.navbar-item:nth-child(2) a:last-child {
+    background-color: var(--login-contact-btn);   
+    border-radius: 0.2rem;
+}
+
+.navbar-item:nth-child(2) button {
+    background-color: var(--login-contact-btn);
+    border: none;
+    color: white;
+}
+
+.hero-section {
+    display: flex;
+    margin: 2rem auto 1rem 4rem;
+    gap: 1.5rem;
+    position: relative;
+}
+
+.hero-section-item:nth-child(1) {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.hero-section h1 {
+    font-weight: bolder;
+}
+
+.hero-section-button {
+    padding: 0.2rem auto;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.hero-section-button > button {
+    padding: 0.4rem 1rem;
+    border: none;
+    border-radius: 0.2rem;
+}
+
+.hero-section-button > button:first-child {
+    box-shadow: 0px 8px 8px -6px  hsla(229, 8%, 60%, 0.514);
+    background-color: var(--btn-color-blue);
+    color: white;
+}
+
+.hero-section-button > button:last-child {
+    background-color: hsla(229, 8%, 60%, 0.1);
+    box-shadow: 0px 8px 8px -6px hsla(231, 69%, 60%, 0.509);
+}
+
+.hero-section-item:nth-child(2)::after {
+    content: "";
+    background: var(--btn-color-blue);
+    position: absolute;
+    right: 0rem;
+    bottom: -2rem;
+    width: 40%;
+    height: 75%;
+    z-index: -1;
+    border-top-left-radius: 30% 50%;
+    border-bottom-left-radius: 30% 50%;
+}
+
+.features-section {
+    display: flex;
+    margin: 6rem 25% 2rem;
+    flex-direction: column;
+    width: 50%;
+    text-align: center;
+    gap: 0.4rem;
+}
+
+.features-section h2 {
+    font-weight: bolder;
+}
+
+.illustration-headers {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0.1rem solid hsla(229, 8%, 60%, 0.505);
+}
+
+.illustration-headers > p {
+    margin-bottom: 0;
+    padding: 0 1rem 1rem;
+    border-bottom: 0.2rem solid var(--login-contact-btn);
+}
+
+p.searching, p.sharing {
+    border-bottom: none;
+}
+
+.illustrations {
+    margin: 4rem;
+}
+
+.tab-1, .tab-2, .tab-3 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    position: relative;
+    gap: 5.5rem;
+}
+
+.illustration::after {
+    content: "";
+    position: absolute;
+    left: -10rem;
+    bottom: -5rem;
+    width: 60%;
+    height: 95%;
+    background: var(--btn-color-blue);
+    z-index: -1;
+    border-top-right-radius: 30% 50%;
+    border-bottom-right-radius: 30% 50%;
+}
+
+#illustrationTwo::after, #illustrationThree::after {
+    width: 52%;
+}
+
+.tab-2, .tab-3 {
+    display: none;
+}
+
+.tab-1-text, .tab-2-text, .tab-3-text {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.tab-1-text h2, .tab-2-text h2, .tab-3-text h2 {
+    font-weight: bolder;
+}
+
+.tab-1-text button, .tab-2-text button, .tab-3-text button {
+    padding: 0.4rem 1rem;
+    border: none;
+    border-radius: 0.2rem;
+    background-color: var(--btn-color-blue);
+    color: white;
+}
+
+.download-section {
+    margin: 11rem 20% 0;
+}
+
+.download-header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.download-images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    text-align: center;
+    height: 200%;
+}
+
+.bg-dots{
+    width: 100%;
+}
+
+.download-images > div {
+    border-radius: 0.5rem;
+    padding: 1.5rem 0;
+    background-color: hsla(229, 8%, 60%, 0.032);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    box-shadow: 0px 8px 8px -4px hsla(231, 69%, 60%, 0.509);
+}
+
+.chrome {
+    margin-bottom: 4rem;
+}
+
+.firefox {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.opera {
+    margin-top: 4rem;
+}
+
+.download-images h4 {
+    font-weight: bolder;
+    margin-bottom: 0;
+}
+
+.download-images button {
+    padding: 0.4rem 1rem;
+    border: none;
+    border-radius: 0.2rem;
+    background-color: var(--btn-color-blue);
+    color: white;
+}
+
+.faq {
+    margin: 7rem 25% 0;
+    width: 50%;
+}
+
+.faq-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.accordion-item:nth-child(1) .accordion-button {
+     border-top: 0.001px solid rgba(0, 0, 0, 0.162);
+}
+
+.accordion-button {
+    font-weight: bold;
+}
+
+.faq-btn {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.faq-btn button {
+    padding: 0.4rem 1rem;
+    border: none;
+    border-radius: 0.2rem;
+    background-color: var(--btn-color-blue);
+    color: white;
+}
+
+.user-mail {
+    margin-top: 10rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 4rem 0 4rem;
+    background-color: var(--btn-color-blue);
+    color: white;  
+}
+
+.user-mail p {
+    letter-spacing: 0.3rem;
+}
+
+.user-mail form {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.user-mail form > div {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.2rem 0.2rem 0 0;
+}
+
+input {
+    padding: 0.4rem 1rem;
+    border-radius: 0.2rem;
+    border: none;
+}
+
+input::placeholder {
+    font-size: small;
+    opacity: 0.5;
+}
+
+.invalid {
+    padding: 0.4rem 1rem;
+    border-radius: 0.2rem 0.2rem 0 0;
+    border-color: var(--login-contact-btn);
+    background-image: url(./images/icon-error.svg);
+    background-repeat: no-repeat;
+    background-position: 95% center;
+}
+
+.error-msg {
+    background-color: var(--login-contact-btn);
+    font-style: italic;
+    font-size: x-small;
+    text-align: left;
+    padding: 0.2rem 0.2rem;
+    border-radius: 0 0 0.2rem 0.2rem;
+    display: none;
+}
+
+form button {
+    padding: 0.4rem 1rem;
+    border: none;
+    border-radius: 0.2rem;
+    background-color: var(--login-contact-btn);
+    color: white;
+    height: 100%;
+}
+
+.footer {
+    background-color: hsl(229, 31%, 21%);
+    color: white;
+}
