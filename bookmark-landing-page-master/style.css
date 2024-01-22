@@ -124,13 +124,14 @@ a:link, a:visited, a:hover, a:active {
     border-bottom: 0.1rem solid hsla(229, 8%, 60%, 0.505);
 }
 
-.illustration-headers > p {
+.illustration-headers  a {
     margin-bottom: 0;
     padding: 0 1rem 1rem;
     border-bottom: 0.2rem solid var(--login-contact-btn);
+    color: black;
 }
 
-p.searching, p.sharing {
+a.searching, a.sharing {
     border-bottom: none;
 }
 
@@ -345,4 +346,250 @@ form button {
 .footer {
     background-color: hsl(229, 31%, 21%);
     color: white;
+    display: grid;
+    padding: 2rem 4rem;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.footer a {
+    color: white;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-logo img {
+    filter: invert(1) brightness(100%) hue-rotate(180deg);
+}
+
+.footer-socials {
+    justify-self: end;
+    display: flex;
+    gap: 3rem;
+}
+
+/* ACTIVE STATES */
+
+.navbar-item:nth-child(2) a:hover {
+    color: var(--login-contact-btn);
+}
+
+.navbar-item:nth-child(2) a:last-child:hover {
+    background-color: white;
+    border: 0.1rem solid var(--login-contact-btn);
+}
+
+.navbar-item:nth-child(2) button:hover {
+    background-color: white;
+    color: var(--login-contact-btn);
+}
+
+.hero-section-button > button:first-child:hover {
+    box-shadow: 0px 8px 8px -6px  hsla(229, 8%, 60%, 0.514);
+    background-color: white;
+    color: var(--btn-color-blue);
+    border: 0.1rem solid var(--btn-color-blue);
+}
+
+.hero-section-button > button:last-child:hover {
+    background-color: white;
+    color:  hsl(229, 8%, 60%);
+    box-shadow: 0px 8px 8px -6px hsla(231, 69%, 60%, 0.509);
+    border: 0.1rem solid hsl(229, 8%, 60%);
+}
+
+.illustration-headers  a:hover {
+    color: var(--login-contact-btn);
+}
+
+.illustrations button:hover {
+    background-color: white;
+    color: var(--btn-color-blue);
+    border: 0.1rem solid var(--btn-color-blue);
+}
+
+.download-section button:hover {
+    background-color: white;
+    color: var(--btn-color-blue);
+    border: 0.1rem solid var(--btn-color-blue);
+}
+
+.accordion-button:hover {
+    color: var(--login-contact-btn);
+}
+
+/* .accordion-button.collapsed::after {
+    color: var(--btn-color-blue);
+} */
+
+/* .accordion-button::after {
+    background-image: url(./assets/images/icon-minus.svg);
+    display: inline-block;
+}
+
+.accordion-button:not(.collapsed)::after {
+    color: var(--btn-color-blue);
+} */
+
+.faq-btn button:hover {
+    background-color: white;
+    color: var(--btn-color-blue);
+    border: 0.1rem solid var(--btn-color-blue);
+}
+
+form button:hover {
+    background-color: white;
+    color: var(--login-contact-btn);
+    border: 0.1rem solid var(--login-contact-btn);
+}
+
+.footer a:hover {
+    color: var(--login-contact-btn);
+}
+
+.footer-socials img:hover {
+    fill: var(--login-contact-btn);
+    cursor: pointer;
+}
+
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width:950px) {
+
+    .navbar {
+        margin: auto 2rem 2rem;
+    }
+
+    .navbar-item:nth-child(2) {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .navbar-item:nth-child(2) img {
+        display: inline-block;
+        cursor: pointer;
+    }
+    
+    .navbar-item:nth-child(2) a {
+        /* z-index: 999; */
+        display: none;
+    }    
+
+    .hero-section {
+        flex-direction: column-reverse;
+        margin: 4rem 0 2rem;
+        gap: 2rem;
+    }
+
+    .hero-section-item:nth-child(1) {
+        padding-top: 2rem;
+        text-align: center;
+    }
+
+    .hero-section-item:nth-child(1) h1 {
+        padding:0 1.5rem;
+    }
+
+    .hero-section-item:nth-child(1) p {
+        padding:0 1.5rem;
+    }
+
+    .hero-section-item:nth-child(2) img {
+        width: 100%;
+    }
+
+    .hero-section-item:nth-child(2)::after {
+        content: "";
+        background: var(--btn-color-blue);
+        position: absolute;
+        right: 0rem;
+        bottom: 13rem;
+        width: 80%;
+        height: 55%;
+        z-index: -1;
+        border-top-left-radius: 30% 50%;
+        border-bottom-left-radius: 30% 50%;
+    }
+
+    .hero-section-button {
+        justify-content: center;
+    }
+
+    .features-section {
+        margin: 6rem 2rem 2rem;
+        width: fit-content;
+    }
+
+    .illustration-headers {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .illustration-headers a {
+        text-align: center;
+        border-top: 0.1rem solid hsla(229, 8%, 60%, 0.505);
+        border-bottom: 0.1rem solid hsla(229, 8%, 60%, 0.505);
+        display: flex;
+        justify-content: center;
+        padding-bottom: 0;
+        padding-top: 16px;
+        padding-bottom: 0;
+    }
+
+    .illustration-headers a:nth-child(1), .illustration-headers a:nth-child(2), .illustration-headers a:nth-child(3) {
+        border-bottom: none;
+    }
+
+    .illustration-headers a:nth-child(1) p {
+        border-bottom: 0.2rem solid var(--login-contact-btn);
+    }
+
+    .illustration-headers p {
+        margin: 0;
+        align-self: flex-start;
+        padding-bottom: 16px;
+    }
+
+
+}
+
+
+
+
+
+@media (max-width:600px) {
+
+    .hero-section-item:nth-child(2)::after {
+        content: "";
+        background: var(--btn-color-blue);
+        position: absolute;
+        right: 0rem;
+        bottom: 13.5rem;
+        width: 80%;
+        height: 40%;
+        z-index: -1;
+        border-top-left-radius: 30% 50%;
+        border-bottom-left-radius: 30% 50%;
+    }
+}
+
+@media (max-width:450px) {
+    
+    .hero-section-item:nth-child(2)::after {
+        content: "";
+        background: var(--btn-color-blue);
+        position: absolute;
+        right: 0rem;
+        bottom: 18.5rem;
+        width: 80%;
+        height: 35%;
+        z-index: -1;
+        border-top-left-radius: 30% 50%;
+        border-bottom-left-radius: 30% 50%;
+    }
+    
 }
