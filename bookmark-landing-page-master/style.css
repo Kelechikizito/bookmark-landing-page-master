@@ -554,7 +554,106 @@ form button:hover {
         padding-bottom: 16px;
     }
 
+    .illustrations {
+        margin: 5rem 2rem;
+    }
+    
+    .tab-1, .tab-2, .tab-3 {
+        display: flex;
+        flex-direction: column;
+    }
 
+    .tab-1-text, .tab-2-text, .tab-3-text {
+        text-align: center;
+        padding:0 1.5rem;
+    }
+
+    .tab-1-text button, .tab-2-text button, .tab-3-text button {
+        display: none;
+    }
+
+    .tab-2, .tab-3 {
+        display: none;
+    }
+
+    .illustration img {
+        width: 100%;
+    }
+
+    .illustration::after {
+        content: "";
+        position: absolute;
+        left: -5rem;
+        bottom: 13rem;
+        width: 80%;
+        height: 60%;
+        background: var(--btn-color-blue);
+        z-index: -1;
+        border-top-right-radius: 30% 50%;
+        border-bottom-right-radius: 30% 50%;
+    }
+
+    #illustrationTwo::after, #illustrationThree::after {
+        width: 80%;
+        bottom: 13rem;
+    }
+
+    .download-section {
+        text-align: center;
+        width: fit-content;
+        margin: auto 2rem;
+    }   
+    
+    .download-images {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .chrome, .firefox, .opera {
+        margin: 0;
+    }
+
+    .faq {
+        margin: 7rem 0;
+        width: 100%;
+    }
+
+    .faq-header {
+        padding: 0 2rem;
+    }
+
+    .accordion {
+        padding: 0 2rem;
+
+    }
+
+    .user-mail form {
+        display: flex;
+        flex-direction: column;
+        padding: 0 1.5rem;
+    }
+
+    form button {
+        width: 100%;
+    }
+    
+    .footer {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 2rem;
+    }
+
+    .footer-nav {
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+    }
+    
+    .footer-socials {
+        justify-self: center;
+        display: flex;
+        gap: 3rem;
+    }
 }
 
 
@@ -575,6 +674,26 @@ form button:hover {
         border-top-left-radius: 30% 50%;
         border-bottom-left-radius: 30% 50%;
     }
+
+    .illustration::after {
+        content: "";
+        position: absolute;
+        left: -5rem;
+        bottom: 13rem;
+        width: 80%;
+        height: 50%;
+        background: var(--btn-color-blue);
+        z-index: -1;
+        border-top-right-radius: 30% 50%;
+        border-bottom-right-radius: 30% 50%;
+    }
+
+    #illustrationTwo::after, #illustrationThree::after {
+        width: 80%;
+        bottom: 13rem;
+        height: 50%;
+    }
+
 }
 
 @media (max-width:450px) {
@@ -590,6 +709,25 @@ form button:hover {
         z-index: -1;
         border-top-left-radius: 30% 50%;
         border-bottom-left-radius: 30% 50%;
+    }
+
+    .illustration::after {
+        content: "";
+        position: absolute;
+        left: -5rem;
+        bottom: 17rem;
+        width: 80%;
+        height: 40%;
+        background: var(--btn-color-blue);
+        z-index: -1;
+        border-top-right-radius: 30% 50%;
+        border-bottom-right-radius: 30% 50%;
+    }
+
+    #illustrationTwo::after, #illustrationThree::after {
+        width: 80%;
+        bottom: 17rem;
+        height: 40%;
     }
     
 }
