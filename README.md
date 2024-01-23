@@ -54,8 +54,8 @@ Users should be able to:
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- [JQuery](https://reactjs.org/) - JS library
-- [Bootstrap 5](https://getbootstrap.com) - React framework
+- [JQuery](https://jquery.com/) - JS library
+- [Bootstrap 5](https://getbootstrap.com) - CSS framework
 
 
 ### What I learned
